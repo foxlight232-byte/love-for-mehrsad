@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>با عشق تقدیم به مهرساد جونم 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            position: relative;
+        }
+        
+        h1 {
+            color: #e91e63;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .heart {
+            font-size: 4em;
+            animation: beat 1.2s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            margin: 25px 0;
+        }
+        
+        .message {
+            background: #fff0f5;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 2px solid #ff69b4;
+        }
+        
+        button {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        button:hover {
+            background: #c2185b;
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>با عشق تقدیم به</h1>
+        <h1 style="color:#ff1493; font-size:3.2em;">مهرساد جونم 💕</h1>
+        
+        <div class="message">
+            <p>عزیزم، میدونم که قهر کردیم و دلت شکسته...</p>
+            <p>ولی تو بهترین چیزی هستی که تو زندگیم دارم. بدون تو همه چیز بی‌رنگه.</p>
+            <p>عاشقتم مهرسادم، بیشتر از هر چیزی تو دنیا. ببخشیدم؟ ❤️</p>
+            <p>می‌خوام دوباره با هم باشیم، بخندیم، خوش باشیم مثل همیشه.</p>
+        </div>
+        
+        <button onclick="showLove()">بگو که دوستم داری 😘</button>
+        
+        <div class="footer">
+            همیشه عاشقت هستم<br>
+            از دل و جان 🌹
+        </div>
+    </div>
+
+    <script>
+        function showLove() {
+            const messages = [
+                "دوستت دارم مهرساد جونم! 💖",
+                "تو بهترین دوست‌پسرم هستی 😍",
+                "هر روز عاشقت‌تر میشم ❤️",
+                "قهرمون تموم شه؟ 🥺",
+                "بوسه‌های فراوان برات 💋💋💋"
+            ];
+            
+            let index = 0;
+            const interval = setInterval(() => {
+                alert(messages[index]);
+                index++;
+                if (index >= messages.length) {
+                    clearInterval(interval);
+                    alert("دوستت دارم برای همیشه! 🌟");
+                }
+            }, 800);
+        }
+        
+        // Confetti effect
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💕';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '-50px';
+            heart.style.fontSize = '2em';
+            heart.style.opacity = '0.8';
+            heart.style.zIndex = '1000';
+            heart.style.transition = 'all 4s linear';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.style.top = '110vh';
+                heart.style.transform = 'rotate(360deg)';
+            }, 100);
+            
+            setTimeout(() => heart.remove(), 5000);
+        }
+        
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
